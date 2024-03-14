@@ -11,6 +11,9 @@ class Company(models.Model):
                                                   'Mobile Phones')))
      added_date=models.DateTimeField(auto_now=True)
      active=models.BooleanField(default=True)
+
+     def __str__(self):
+          return self.name +'---' + self.location
      class Meta:
           managed=True
 
